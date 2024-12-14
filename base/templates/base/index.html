@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(239, 223, 210, 0.82);
+            font-family: "Abel", sans-serif;
+            padding-top: 60px;
+        }
+        .container {
+            max-width: 550px;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            -webkit-box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+            box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif;
+            font-style: italic;
+        }
+        a,
+        p {
+            color: darkred;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding: 10px;
+            background-color: #a7a7f6;
+            border-radius: 5px 5px 0px 0px;
+
+        }
+
+        .top-bar a{
+            color: white;
+            text-decoration: none;
+
+        }
+        .task-item-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-top: 1px solid #e0e0e0;
+        }
+        .task-title {
+            display: flex;
+            vertical-align: center;
+
+        }
+        .task-title a {
+            text-decoration: none;
+            margin-left: 20px;
+            color: grey;
+            font-size: 16px;
+        }
+        .task-icon-done {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+        }
+        .task-icon-not-done {
+            width: 20px;
+            height: 20px;
+            background-color: grey;
+            border-radius: 50%;
+        }
+        .delete-link {
+            color: red;
+            text-decoration: none;
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        #search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        #add-link{
+            font-size: 22px;
+            text-decoration: none;
+            line-height: 0;
+            color: red;
+            text-shadow: 1px 1px 1px darkred;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+            width: 90%;
+        }
+
+        label {
+            padding-top: 10px !important;
+            display: block;
+            color: grey;
+        }
+        .submit-button {
+            background-color: #fafafa;
+            color: #a7a7f6;
+            border: 1px solid #a7a7f6;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .card-form {
+            padding:20px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
